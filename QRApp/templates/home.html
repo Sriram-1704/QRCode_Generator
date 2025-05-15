@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Welcome, {{ request.user.username }}!</h2>
+    <p><a href="{% url 'generate' %}" class="btn btn-primary">Generate QR Code</a></p>
+    <p><a href="{% url 'history' %}" class="btn btn-info">View QR Code History</a></p>
+    <p><a href="{% url 'logout' %}" class="btn btn-danger">Logout</a></p>
+</div>
+</body>
+</html>
